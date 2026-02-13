@@ -2,9 +2,27 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jarvis Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>🧭 Jarvis Dashboard</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%231a1a2e' width='180' height='180' rx='30'/><text x='90' y='130' font-size='100' text-anchor='middle'>🧭</text></svg>">
     <style>
+        :root {
+            --bg-primary: #1a1a2e;
+            --bg-secondary: #16213e;
+            --bg-card: rgba(255, 255, 255, 0.1);
+            --accent: #667eea;
+            --accent-secondary: #764ba2;
+            --gold: #FFD700;
+            --green: #4ade80;
+            --red: #f87171;
+            --yellow: #fbbf24;
+            --blue: #60a5fa;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,76 +31,82 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, #0f3460 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 15px;
             color: #fff;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            margin-top: 5px;
         }
 
         .last-updated {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.75rem;
+            margin-top: 5px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1400px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--bg-card);
             backdrop-filter: blur(10px);
             border-radius: 16px;
-            padding: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        .card.full-width {
+            grid-column: span 2;
         }
 
         .card-header {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+            gap: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .card-icon {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
 
         .card-title {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
             font-weight: 600;
+            color: var(--accent);
         }
 
         .metric {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
+            padding: 8px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -92,118 +116,160 @@
 
         .metric-label {
             color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
         }
 
         .metric-value {
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
-        .metric-value.up {
-            color: #4ade80;
-        }
-
-        .metric-value.down {
-            color: #f87171;
-        }
-
-        .metric-value.neutral {
-            color: #60a5fa;
-        }
+        .metric-value.up { color: var(--green); }
+        .metric-value.down { color: var(--red); }
+        .metric-value.neutral { color: var(--blue); }
+        .metric-value.gold { color: var(--gold); }
 
         .status-dot {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
             display: inline-block;
-            margin-right: 8px;
+            margin-right: 6px;
         }
 
-        .status-dot.green {
-            background: #4ade80;
-            box-shadow: 0 0 10px #4ade80;
-        }
-
-        .status-dot.yellow {
-            background: #fbbf24;
-            box-shadow: 0 0 10px #fbbf24;
-        }
-
-        .status-dot.red {
-            background: #f87171;
-            box-shadow: 0 0 10px #f87171;
-        }
+        .status-dot.green { background: var(--green); box-shadow: 0 0 8px var(--green); }
+        .status-dot.yellow { background: var(--yellow); box-shadow: 0 0 8px var(--yellow); }
+        .status-dot.red { background: var(--red); box-shadow: 0 0 8px var(--red); }
 
         .progress-bar {
             width: 100%;
-            height: 8px;
+            height: 6px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
+            border-radius: 3px;
             overflow: hidden;
-            margin-top: 8px;
+            margin-top: 6px;
         }
 
         .progress-fill {
             height: 100%;
-            border-radius: 4px;
+            border-radius: 3px;
             transition: width 0.5s ease;
         }
 
-        .progress-fill.low { background: #4ade80; }
-        .progress-fill.medium { background: #fbbf24; }
-        .progress-fill.high { background: #f87171; }
+        .progress-fill.low { background: var(--green); }
+        .progress-fill.medium { background: var(--yellow); }
+        .progress-fill.high { background: var(--red); }
 
         .refresh-btn {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
             color: #fff;
             border: none;
-            padding: 15px 25px;
-            border-radius: 30px;
-            font-size: 1rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            font-size: 1.5rem;
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
             transition: all 0.3s ease;
+            z-index: 100;
         }
 
-        .refresh-btn:hover {
-            transform: scale(1.05);
+        .refresh-btn:active {
+            transform: scale(0.95);
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
-        .loading {
-            animation: pulse 1.5s ease-in-out infinite;
+        .refresh-btn.loading {
+            animation: spin 1s linear infinite;
+        }
+
+        /* Weather special styling */
+        .weather-display {
+            text-align: center;
+            padding: 10px 0;
         }
 
         .weather-icon {
-            font-size: 3rem;
-            text-align: center;
-            margin: 10px 0;
+            font-size: 2.5rem;
         }
 
         .temp {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: bold;
-            text-align: center;
+            color: var(--gold);
         }
 
-        @media (max-width: 768px) {
+        .weather-details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Cron jobs */
+        .cron-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            font-size: 0.85rem;
+        }
+
+        .cron-time {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
             .grid {
                 grid-template-columns: 1fr;
+                gap: 10px;
             }
+
+            .card.full-width {
+                grid-column: span 1;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .card {
+                padding: 12px;
+            }
+
+            .metric {
+                padding: 6px 0;
+            }
+        }
+
+        /* Pull to refresh hint */
+        .refresh-hint {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.7rem;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🧭 Jarvis Dashboard</h1>
-        <p class="last-updated">最后更新: <span id="update-time">加载中...</span></p>
+        <div class="subtitle">实时状态监控</div>
+        <div class="last-updated" id="update-time">加载中...</div>
     </div>
 
     <div class="grid">
@@ -211,32 +277,28 @@
         <div class="card">
             <div class="card-header">
                 <span class="card-icon">💻</span>
-                <span class="card-title">系统状态</span>
+                <span class="card-title">系统</span>
             </div>
             <div class="metric">
-                <span class="metric-label">CPU 使用率</span>
+                <span class="metric-label">CPU</span>
                 <span class="metric-value" id="cpu">--</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-fill" id="cpu-bar"></div>
             </div>
             <div class="metric">
-                <span class="metric-label">内存使用</span>
+                <span class="metric-label">内存</span>
                 <span class="metric-value" id="memory">--</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-fill" id="mem-bar"></div>
             </div>
             <div class="metric">
-                <span class="metric-label">磁盘使用</span>
+                <span class="metric-label">磁盘</span>
                 <span class="metric-value" id="disk">--</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-fill" id="disk-bar"></div>
-            </div>
-            <div class="metric" style="margin-top: 15px;">
-                <span class="metric-label">Gateway 状态</span>
-                <span class="metric-value" id="gateway-status"><span class="status-dot green"></span>在线</span>
             </div>
         </div>
 
@@ -244,21 +306,19 @@
         <div class="card">
             <div class="card-header">
                 <span class="card-icon">🌤️</span>
-                <span class="card-title">马德里天气</span>
+                <span class="card-title">马德里</span>
             </div>
-            <div class="weather-icon" id="weather-icon">⛅</div>
-            <div class="temp" id="temp">--°C</div>
+            <div class="weather-display">
+                <div class="weather-icon" id="weather-icon">⛅</div>
+                <div class="temp" id="temp">--°</div>
+                <div class="weather-details">
+                    <span>💧 <span id="humidity">--</span>%</span>
+                    <span>💨 <span id="wind">--</span>km</span>
+                </div>
+            </div>
             <div class="metric">
                 <span class="metric-label">天气</span>
                 <span class="metric-value" id="weather-desc">--</span>
-            </div>
-            <div class="metric">
-                <span class="metric-label">湿度</span>
-                <span class="metric-value" id="humidity">--</span>
-            </div>
-            <div class="metric">
-                <span class="metric-label">风速</span>
-                <span class="metric-value" id="wind">--</span>
             </div>
         </div>
 
@@ -274,27 +334,23 @@
             </div>
             <div class="metric">
                 <span class="metric-label">CN 账户</span>
-                <span class="metric-value neutral" id="cn-account">¥100,000</span>
+                <span class="metric-value gold" id="cn-account">¥100,000</span>
             </div>
             <div class="metric">
-                <span class="metric-label">今日收益 (US)</span>
+                <span class="metric-label">今日 PnL</span>
                 <span class="metric-value" id="us-pnl">--</span>
-            </div>
-            <div class="metric">
-                <span class="metric-label">持仓数量</span>
-                <span class="metric-value" id="positions">--</span>
             </div>
         </div>
 
-        <!-- OpenClaw Status -->
+        <!-- OpenClaw -->
         <div class="card">
             <div class="card-header">
                 <span class="card-icon">🦞</span>
-                <span class="card-title">OpenClaw 状态</span>
+                <span class="card-title">OpenClaw</span>
             </div>
             <div class="metric">
                 <span class="metric-label">版本</span>
-                <span class="metric-value" id="oc-version">2026.2.9</span>
+                <span class="metric-value" id="oc-version">2026.2.12</span>
             </div>
             <div class="metric">
                 <span class="metric-label">运行时间</span>
@@ -302,11 +358,11 @@
             </div>
             <div class="metric">
                 <span class="metric-label">Telegram</span>
-                <span class="metric-value"><span class="status-dot green"></span>已连接</span>
+                <span class="metric-value"><span class="status-dot green"></span>在线</span>
             </div>
             <div class="metric">
                 <span class="metric-label">模型</span>
-                <span class="metric-value" id="model">MiniMax-M2.1</span>
+                <span class="metric-value" id="model">M2.5</span>
             </div>
         </div>
 
@@ -325,12 +381,8 @@
                 <span class="metric-value" id="gh-forks">--</span>
             </div>
             <div class="metric">
-                <span class="metric-label">Open Issues</span>
+                <span class="metric-label">Issues</span>
                 <span class="metric-value" id="gh-issues">--</span>
-            </div>
-            <div class="metric">
-                <span class="metric-label">最新提交</span>
-                <span class="metric-value" id="gh-commits">--</span>
             </div>
         </div>
 
@@ -340,41 +392,44 @@
                 <span class="card-icon">⏰</span>
                 <span class="card-title">定时任务</span>
             </div>
-            <div class="metric">
-                <span class="metric-label"> Productivity Tip</span>
-                <span class="metric-value"><span class="status-dot green"></span>9:00</span>
+            <div class="cron-item">
+                <span>📊 Productivity Tip</span>
+                <span class="cron-time">09:00</span>
             </div>
-            <div class="metric">
-                <span class="metric-label">X Daily Brief</span>
-                <span class="metric-value"><span class="status-dot green"></span>23:00</span>
+            <div class="cron-item">
+                <span>🐦 X Daily Brief</span>
+                <span class="cron-time">23:00</span>
             </div>
-            <div class="metric">
-                <span class="metric-label">Daily Report</span>
-                <span class="metric-value"><span class="status-dot green"></span>23:59</span>
-            </div>
-            <div class="metric">
-                <span class="metric-label">下次执行</span>
-                <span class="metric-value" id="next-cron">--</span>
+            <div class="cron-item">
+                <span>📝 Daily Report</span>
+                <span class="cron-time">23:59</span>
             </div>
         </div>
     </div>
 
-    <button class="refresh-btn" onclick="refreshData()">🔄 刷新数据</button>
+    <button class="refresh-btn" id="refreshBtn" onclick="refreshData()">🔄</button>
+
+    <div class="refresh-hint">点击按钮刷新 · 每 5 分钟自动更新</div>
 
     <script>
         async function refreshData() {
+            const btn = document.getElementById('refreshBtn');
+            btn.classList.add('loading');
+            
             try {
-                const response = await fetch('/dashboard-data.json?_=' + Date.now());
+                const response = await fetch('dashboard-data.json?_=' + Date.now());
                 const data = await response.json();
                 updateDashboard(data);
             } catch (e) {
                 console.log('Using demo data');
                 loadDemoData();
             }
+            
+            btn.classList.remove('loading');
         }
 
         function updateDashboard(data) {
-            document.getElementById('update-time').textContent = new Date().toLocaleString('zh-CN');
+            document.getElementById('update-time').textContent = '更新于: ' + new Date().toLocaleString('zh-CN');
             
             if (data.system) {
                 updateMetric('cpu', data.system.cpu + '%', data.system.cpu);
@@ -389,24 +444,23 @@
             if (data.weather) {
                 document.getElementById('temp').textContent = data.weather.temp + '°C';
                 document.getElementById('weather-desc').textContent = data.weather.desc;
-                document.getElementById('humidity').textContent = data.weather.humidity + '%';
-                document.getElementById('wind').textContent = data.weather.wind + ' km/h';
+                document.getElementById('humidity').textContent = data.weather.humidity;
+                document.getElementById('wind').textContent = data.weather.wind;
                 document.getElementById('weather-icon').textContent = getWeatherIcon(data.weather.desc);
             }
 
             if (data.trading) {
                 document.getElementById('us-account').textContent = '$' + data.trading.us.toLocaleString();
                 document.getElementById('cn-account').textContent = '¥' + data.trading.cn.toLocaleString();
-                document.getElementById('us-pnl').textContent = (data.trading.usPnl >= 0 ? '+' : '') + '$' + data.trading.usPnl.toFixed(2);
-                document.getElementById('us-pnl').className = 'metric-value ' + (data.trading.usPnl >= 0 ? 'up' : 'down');
-                document.getElementById('positions').textContent = data.trading.positions;
+                const pnl = data.trading.usPnl;
+                document.getElementById('us-pnl').textContent = (pnl >= 0 ? '+' : '') + '$' + pnl.toFixed(2);
+                document.getElementById('us-pnl').className = 'metric-value ' + (pnl >= 0 ? 'up' : 'down');
             }
 
             if (data.github) {
-                document.getElementById('gh-stars').textContent = data.github.stars.toLocaleString();
-                document.getElementById('gh-forks').textContent = data.github.forks.toLocaleString();
+                document.getElementById('gh-stars').textContent = (data.github.stars / 1000).toFixed(1) + 'k';
+                document.getElementById('gh-forks').textContent = (data.github.forks / 1000).toFixed(1) + 'k';
                 document.getElementById('gh-issues').textContent = data.github.issues;
-                document.getElementById('gh-commits').textContent = data.github.commits;
             }
         }
 
@@ -425,7 +479,8 @@
         function getWeatherIcon(desc) {
             const icons = {
                 '晴': '☀️', '多云': '⛅', '阴': '☁️', '雨': '🌧️', '雪': '❄️',
-                '雷': '⛈️', '雾': '🌫️', '风': '💨'
+                '雷': '⛈️', '雾': '🌫️', '风': '💨', 'Partly': '⛅',
+                'Clear': '☀️', 'Cloudy': '☁️', 'Rain': '🌧️'
             };
             for (let key in icons) {
                 if (desc.includes(key)) return icons[key];
@@ -435,17 +490,28 @@
 
         function loadDemoData() {
             const demo = {
-                system: { cpu: 23, memory: 45, disk: 62, uptime: '3天 2小时' },
+                system: { cpu: 15, memory: 45, disk: 62, uptime: '3天 2小时' },
                 weather: { temp: 12, desc: '多云', humidity: 65, wind: 15 },
-                trading: { us: 10234, cn: 100000, usPnl: 234.50, positions: 3 },
-                github: { stars: 15420, forks: 2341, issues: 89, commits: 12 }
+                trading: { us: 10234, cn: 100000, usPnl: 234.50 },
+                github: { stars: 191000, forks: 32511, issues: 5691 }
             };
             updateDashboard(demo);
         }
 
-        // Load on start
+        // Initial load
         refreshData();
-        setInterval(refreshData, 60000); // Auto-refresh every minute
+        
+        // Auto-refresh every 5 minutes
+        setInterval(refreshData, 300000);
+
+        // Pull to refresh on mobile
+        let lastY = 0;
+        document.addEventListener('touchstart', e => lastY = e.touches[0].clientY);
+        document.addEventListener('touchend', e => {
+            if (lastY - e.changedTouches[0].clientY > 100) {
+                refreshData();
+            }
+        });
     </script>
 </body>
 </html>

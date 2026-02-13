@@ -1,0 +1,1305 @@
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T15:40:08.637Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 4 hours, 29 minutes"
+  },
+  "weather": {
+    "temp": 9,
+    "desc": "Partly cloudy",
+    "humidity": 76,
+    "wind": 35
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191003,
+    "forks": 32511,
+    "issues": 5690,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T15:45:06.280Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 4 hours, 34 minutes"
+  },
+  "weather": {
+    "temp": 9,
+    "desc": "Partly cloudy",
+    "humidity": 76,
+    "wind": 35
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191020,
+    "forks": 32514,
+    "issues": 5691,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T15:50:09.554Z",
+  "system": {
+    "cpu": 5,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 4 hours, 39 minutes"
+  },
+  "weather": {
+    "temp": 9,
+    "desc": "Partly cloudy",
+    "humidity": 76,
+    "wind": 35
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191030,
+    "forks": 32517,
+    "issues": 5697,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T15:55:04.275Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 4 hours, 44 minutes"
+  },
+  "weather": {
+    "temp": 10,
+    "desc": "Partly cloudy",
+    "humidity": 62,
+    "wind": 35
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191042,
+    "forks": 32519,
+    "issues": 5700,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:00:07.158Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 4 hours, 49 minutes"
+  },
+  "weather": {
+    "temp": 10,
+    "desc": "Partly cloudy",
+    "humidity": 62,
+    "wind": 35
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191046,
+    "forks": 32523,
+    "issues": 5711,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:05:05.544Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 4 hours, 54 minutes"
+  },
+  "weather": {
+    "temp": 10,
+    "desc": "Partly cloudy",
+    "humidity": 62,
+    "wind": 35
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191055,
+    "forks": 32524,
+    "issues": 5711,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:10:11.978Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 4 hours, 59 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191070,
+    "forks": 32525,
+    "issues": 5711,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:15:12.545Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 4 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191074,
+    "forks": 32532,
+    "issues": 5713,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:20:12.096Z",
+  "system": {
+    "cpu": 5,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 9 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191085,
+    "forks": 32535,
+    "issues": 5706,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:25:09.575Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 14 minutes"
+  },
+  "weather": {
+    "temp": 10,
+    "desc": "Partly cloudy",
+    "humidity": 62,
+    "wind": 35
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191098,
+    "forks": 32539,
+    "issues": 5707,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:30:12.135Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 19 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191103,
+    "forks": 32538,
+    "issues": 5707,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:35:06.863Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 24 minutes"
+  },
+  "weather": {
+    "temp": 10,
+    "desc": "Partly cloudy",
+    "humidity": 62,
+    "wind": 35
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191109,
+    "forks": 32542,
+    "issues": 5707,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:40:12.305Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 29 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191119,
+    "forks": 32548,
+    "issues": 5710,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:45:11.855Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 34 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191128,
+    "forks": 32553,
+    "issues": 5711,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:50:12.412Z",
+  "system": {
+    "cpu": 5,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 39 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191137,
+    "forks": 32560,
+    "issues": 5711,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T16:55:04.396Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 44 minutes"
+  },
+  "weather": {
+    "temp": 10,
+    "desc": "Partly cloudy",
+    "humidity": 62,
+    "wind": 35
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191152,
+    "forks": 32564,
+    "issues": 5716,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:00:11.986Z",
+  "system": {
+    "cpu": 5,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 49 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191166,
+    "forks": 32565,
+    "issues": 5721,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:05:07.208Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 54 minutes"
+  },
+  "weather": {
+    "temp": 10,
+    "desc": "Partly cloudy",
+    "humidity": 62,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191183,
+    "forks": 32566,
+    "issues": 5719,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:10:11.928Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 5 hours, 59 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191187,
+    "forks": 32566,
+    "issues": 5720,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:15:04.776Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 4 minutes"
+  },
+  "weather": {
+    "temp": 10,
+    "desc": "Partly cloudy",
+    "humidity": 62,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191193,
+    "forks": 32570,
+    "issues": 5717,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:20:12.354Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 9 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191199,
+    "forks": 32571,
+    "issues": 5715,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:25:10.445Z",
+  "system": {
+    "cpu": 5,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 14 minutes"
+  },
+  "weather": {
+    "temp": 10,
+    "desc": "Partly cloudy",
+    "humidity": 62,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191204,
+    "forks": 32574,
+    "issues": 5723,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:30:11.996Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 19 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191216,
+    "forks": 32576,
+    "issues": 5732,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:35:03.049Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 24 minutes"
+  },
+  "weather": {
+    "temp": 10,
+    "desc": "Partly cloudy",
+    "humidity": 62,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191225,
+    "forks": 32581,
+    "issues": 5733,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:40:06.919Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 29 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 71,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191237,
+    "forks": 32584,
+    "issues": 5736,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:45:10.644Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 34 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 71,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191244,
+    "forks": 32587,
+    "issues": 5741,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:50:06.820Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 39 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 71,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191252,
+    "forks": 32589,
+    "issues": 5742,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T17:55:12.359Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 44 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191269,
+    "forks": 32591,
+    "issues": 5743,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:00:11.909Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 49 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191279,
+    "forks": 32594,
+    "issues": 5745,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:05:06.305Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 54 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 71,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191290,
+    "forks": 32596,
+    "issues": 5744,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:10:11.855Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 71,
+    "uptime": "up 2 weeks, 2 days, 6 hours, 59 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191301,
+    "forks": 32599,
+    "issues": 5749,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:15:08.070Z",
+  "system": {
+    "cpu": 0,
+    "memory": 15,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 4 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 71,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191315,
+    "forks": 32602,
+    "issues": 5751,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:20:07.886Z",
+  "system": {
+    "cpu": 0,
+    "memory": 14,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 9 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 71,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191325,
+    "forks": 32605,
+    "issues": 5752,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:25:05.556Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 14 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 71,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191337,
+    "forks": 32605,
+    "issues": 5756,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:30:12.151Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 19 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191343,
+    "forks": 32609,
+    "issues": 5757,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:35:11.727Z",
+  "system": {
+    "cpu": 5,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 24 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191350,
+    "forks": 32611,
+    "issues": 5760,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:40:09.950Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 29 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 61,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191359,
+    "forks": 32613,
+    "issues": 5757,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:45:12.510Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 34 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191366,
+    "forks": 32617,
+    "issues": 5764,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:50:10.423Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 39 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 61,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191370,
+    "forks": 32620,
+    "issues": 5763,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T18:55:03.951Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 44 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 61,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191372,
+    "forks": 32620,
+    "issues": 5766,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T19:00:11.239Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 49 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 61,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191380,
+    "forks": 32622,
+    "issues": 5768,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T19:05:06.769Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 54 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 61,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191390,
+    "forks": 32625,
+    "issues": 5767,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T19:10:12.344Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 7 hours, 59 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191406,
+    "forks": 32629,
+    "issues": 5766,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T19:15:06.263Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 8 hours, 4 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 61,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191416,
+    "forks": 32630,
+    "issues": 5767,
+    "commits": "12"
+  }
+}
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T19:20:08.230Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 8 hours, 9 minutes"
+  },
+  "weather": {
+    "temp": 8,
+    "desc": "Partly cloudy",
+    "humidity": 61,
+    "wind": 32
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191427,
+    "forks": 32631,
+    "issues": 5769,
+    "commits": "12"
+  }
+}
