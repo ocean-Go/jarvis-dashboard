@@ -1,0 +1,32 @@
+{
+  "account": "USD",
+  "balance": 10000,
+  "trades": [
+    {
+      "date": "2026-02-13",
+      "symbol": "NVDA",
+      "action": "BUY",
+      "shares": 20,
+      "price": 135.50,
+      "total": 2710.00
+    },
+    {
+      "date": "2026-02-13",
+      "symbol": "AAPL",
+      "action": "BUY", 
+      "shares": 15,
+      "price": 227.00,
+      "total": 3405.00
+    },
+    {
+      "date": "2026-02-13",
+      "symbol": "VRT",
+      "action": "BUY",
+      "shares": 20,
+      "price": 158.75,
+      "total": 3175.00
+    }
+  ],
+  "total_invested": 9290.00,
+  "remaining_cash": 710.00
+}
