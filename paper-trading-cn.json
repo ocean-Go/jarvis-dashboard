@@ -1,0 +1,26 @@
+{
+  "account": "CNY",
+  "balance": 100000,
+  "trades": [
+    {
+      "date": "2026-02-13",
+      "symbol": "603019",
+      "name": "中科曙光",
+      "action": "BUY",
+      "shares": 500,
+      "price": 58.50,
+      "total": 29250.00
+    },
+    {
+      "date": "2026-02-13", 
+      "symbol": "002837",
+      "name": "英维克",
+      "action": "BUY",
+      "shares": 800,
+      "price": 42.80,
+      "total": 34240.00
+    }
+  ],
+  "total_invested": 63490.00,
+  "remaining_cash": 36510.00
+}

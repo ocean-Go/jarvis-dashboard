@@ -1,31 +1,35 @@
 {
-  "timestamp": "2026-02-13T19:30:00.000Z",
+  "timestamp": "2026-02-13T19:35:00.000Z",
   "system": {
     "cpu": 0,
     "memory": 13,
     "disk": 72,
-    "uptime": "up 2 weeks, 2 days, 8 hours"
+    "uptime": "up 2 weeks, 2 days"
   },
   "weather": {
-    "temp": 8,
-    "desc": "Partly cloudy",
-    "humidity": 61,
-    "wind": 32
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
   },
   "trading": {
     "us": 10000,
     "cn": 100000,
     "usPnl": 0,
-    "positions": 3,
-    "holdings": [
+    "positions": 5,
+    "us_holdings": [
       {"symbol": "NVDA", "shares": 20, "avgPrice": 135.50},
       {"symbol": "AAPL", "shares": 15, "avgPrice": 227.00},
       {"symbol": "VRT", "shares": 20, "avgPrice": 158.75}
+    ],
+    "cn_holdings": [
+      {"symbol": "603019", "name": "中科曙光", "shares": 500, "avgPrice": 58.50},
+      {"symbol": "002837", "name": "英维克", "shares": 800, "avgPrice": 42.80}
     ]
   },
   "github": {
-    "stars": 191432,
-    "forks": 32635,
+    "stars": 191439,
+    "forks": 32639,
     "issues": 5769,
     "commits": "12"
   }

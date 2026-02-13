@@ -1332,3 +1332,32 @@
     "commits": "12"
   }
 }
+📊 Fetching dashboard data...
+✅ Dashboard data updated: /home/ubuntu/.openclaw/workspace/dynamic-dashboard/dashboard-data.json
+{
+  "timestamp": "2026-02-13T19:30:12.149Z",
+  "system": {
+    "cpu": 0,
+    "memory": 13,
+    "disk": 72,
+    "uptime": "up 2 weeks, 2 days, 8 hours, 19 minutes"
+  },
+  "weather": {
+    "temp": 12,
+    "desc": "多云",
+    "humidity": 65,
+    "wind": 15
+  },
+  "trading": {
+    "us": 10000,
+    "cn": 100000,
+    "usPnl": 0,
+    "positions": 0
+  },
+  "github": {
+    "stars": 191439,
+    "forks": 32639,
+    "issues": 5769,
+    "commits": "12"
+  }
+}
