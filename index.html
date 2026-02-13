@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .metric:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .metric-value {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .metric-value.up {
+            color: #4ade80;
+        }
+
+        .metric-value.down {
+            color: #f87171;
+        }
+
+        .metric-value.neutral {
+            color: #60a5fa;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .status-dot.green {
+            background: #4ade80;
+            box-shadow: 0 0 10px #4ade80;
+        }
+
+        .status-dot.yellow {
+            background: #fbbf24;
+            box-shadow: 0 0 10px #fbbf24;
+        }
+
+        .status-dot.red {
+            background: #f87171;
+            box-shadow: 0 0 10px #f87171;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .progress-fill.low { background: #4ade80; }
+        .progress-fill.medium { background: #fbbf24; }
+        .progress-fill.high { background: #f87171; }
+
+        .refresh-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .refresh-btn:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .loading {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .weather-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .temp {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧭 Jarvis Dashboard</h1>
+        <p class="last-updated">最后更新: <span id="update-time">加载中...</span></p>
+    </div>
+
+    <div class="grid">
+        <!-- System Status -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">💻</span>
+                <span class="card-title">系统状态</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">CPU 使用率</span>
+                <span class="metric-value" id="cpu">--</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="cpu-bar"></div>
+            </div>
+            <div class="metric">
+                <span class="metric-label">内存使用</span>
+                <span class="metric-value" id="memory">--</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="mem-bar"></div>
+            </div>
+            <div class="metric">
+                <span class="metric-label">磁盘使用</span>
+                <span class="metric-value" id="disk">--</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="disk-bar"></div>
+            </div>
+            <div class="metric" style="margin-top: 15px;">
+                <span class="metric-label">Gateway 状态</span>
+                <span class="metric-value" id="gateway-status"><span class="status-dot green"></span>在线</span>
+            </div>
+        </div>
+
+        <!-- Weather -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">🌤️</span>
+                <span class="card-title">马德里天气</span>
+            </div>
+            <div class="weather-icon" id="weather-icon">⛅</div>
+            <div class="temp" id="temp">--°C</div>
+            <div class="metric">
+                <span class="metric-label">天气</span>
+                <span class="metric-value" id="weather-desc">--</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">湿度</span>
+                <span class="metric-value" id="humidity">--</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">风速</span>
+                <span class="metric-value" id="wind">--</span>
+            </div>
+        </div>
+
+        <!-- Trading -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">📈</span>
+                <span class="card-title">Paper Trading</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">US 账户</span>
+                <span class="metric-value up" id="us-account">$10,000</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">CN 账户</span>
+                <span class="metric-value neutral" id="cn-account">¥100,000</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">今日收益 (US)</span>
+                <span class="metric-value" id="us-pnl">--</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">持仓数量</span>
+                <span class="metric-value" id="positions">--</span>
+            </div>
+        </div>
+
+        <!-- OpenClaw Status -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">🦞</span>
+                <span class="card-title">OpenClaw 状态</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">版本</span>
+                <span class="metric-value" id="oc-version">2026.2.9</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">运行时间</span>
+                <span class="metric-value" id="uptime">--</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Telegram</span>
+                <span class="metric-value"><span class="status-dot green"></span>已连接</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">模型</span>
+                <span class="metric-value" id="model">MiniMax-M2.1</span>
+            </div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">🐙</span>
+                <span class="card-title">GitHub</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Stars</span>
+                <span class="metric-value up" id="gh-stars">--</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Forks</span>
+                <span class="metric-value" id="gh-forks">--</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Open Issues</span>
+                <span class="metric-value" id="gh-issues">--</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">最新提交</span>
+                <span class="metric-value" id="gh-commits">--</span>
+            </div>
+        </div>
+
+        <!-- Cron Jobs -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">⏰</span>
+                <span class="card-title">定时任务</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label"> Productivity Tip</span>
+                <span class="metric-value"><span class="status-dot green"></span>9:00</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">X Daily Brief</span>
+                <span class="metric-value"><span class="status-dot green"></span>23:00</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Daily Report</span>
+                <span class="metric-value"><span class="status-dot green"></span>23:59</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">下次执行</span>
+                <span class="metric-value" id="next-cron">--</span>
+            </div>
+        </div>
+    </div>
+
+    <button class="refresh-btn" onclick="refreshData()">🔄 刷新数据</button>
+
+    <script>
+        async function refreshData() {
+            try {
+                const response = await fetch('/dashboard-data.json?_=' + Date.now());
+                const data = await response.json();
+                updateDashboard(data);
+            } catch (e) {
+                console.log('Using demo data');
+                loadDemoData();
+            }
+        }
+
+        function updateDashboard(data) {
+            document.getElementById('update-time').textContent = new Date().toLocaleString('zh-CN');
+            
+            if (data.system) {
+                updateMetric('cpu', data.system.cpu + '%', data.system.cpu);
+                updateProgressBar('cpu-bar', data.system.cpu);
+                updateMetric('memory', data.system.memory + '%', data.system.memory);
+                updateProgressBar('mem-bar', data.system.memory);
+                updateMetric('disk', data.system.disk + '%', data.system.disk);
+                updateProgressBar('disk-bar', data.system.disk);
+                document.getElementById('uptime').textContent = data.system.uptime || '--';
+            }
+
+            if (data.weather) {
+                document.getElementById('temp').textContent = data.weather.temp + '°C';
+                document.getElementById('weather-desc').textContent = data.weather.desc;
+                document.getElementById('humidity').textContent = data.weather.humidity + '%';
+                document.getElementById('wind').textContent = data.weather.wind + ' km/h';
+                document.getElementById('weather-icon').textContent = getWeatherIcon(data.weather.desc);
+            }
+
+            if (data.trading) {
+                document.getElementById('us-account').textContent = '$' + data.trading.us.toLocaleString();
+                document.getElementById('cn-account').textContent = '¥' + data.trading.cn.toLocaleString();
+                document.getElementById('us-pnl').textContent = (data.trading.usPnl >= 0 ? '+' : '') + '$' + data.trading.usPnl.toFixed(2);
+                document.getElementById('us-pnl').className = 'metric-value ' + (data.trading.usPnl >= 0 ? 'up' : 'down');
+                document.getElementById('positions').textContent = data.trading.positions;
+            }
+
+            if (data.github) {
+                document.getElementById('gh-stars').textContent = data.github.stars.toLocaleString();
+                document.getElementById('gh-forks').textContent = data.github.forks.toLocaleString();
+                document.getElementById('gh-issues').textContent = data.github.issues;
+                document.getElementById('gh-commits').textContent = data.github.commits;
+            }
+        }
+
+        function updateMetric(id, value, num) {
+            const el = document.getElementById(id);
+            el.textContent = value;
+            el.className = 'metric-value ' + (num < 50 ? 'up' : num < 80 ? 'neutral' : 'down');
+        }
+
+        function updateProgressBar(id, percent) {
+            const bar = document.getElementById(id);
+            bar.style.width = percent + '%';
+            bar.className = 'progress-fill ' + (percent < 50 ? 'low' : percent < 80 ? 'medium' : 'high');
+        }
+
+        function getWeatherIcon(desc) {
+            const icons = {
+                '晴': '☀️', '多云': '⛅', '阴': '☁️', '雨': '🌧️', '雪': '❄️',
+                '雷': '⛈️', '雾': '🌫️', '风': '💨'
+            };
+            for (let key in icons) {
+                if (desc.includes(key)) return icons[key];
+            }
+            return '⛅';
+        }
+
+        function loadDemoData() {
+            const demo = {
+                system: { cpu: 23, memory: 45, disk: 62, uptime: '3天 2小时' },
+                weather: { temp: 12, desc: '多云', humidity: 65, wind: 15 },
+                trading: { us: 10234, cn: 100000, usPnl: 234.50, positions: 3 },
+                github: { stars: 15420, forks: 2341, issues: 89, commits: 12 }
+            };
+            updateDashboard(demo);
+        }
+
+        // Load on start
+        refreshData();
+        setInterval(refreshData, 60000); // Auto-refresh every minute
+    </script>
+</body>
+</html>
